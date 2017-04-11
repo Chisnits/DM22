@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+.wrapper{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main-header{
+    height: 150px;
+    width: 100%;
+    background-color: gray;
+}
+.white-box{
+    background-color: white;
+    left: 165px;
+    height: 750px;
+    width: 615px;
+    z-index: 0;
+    position: absolute;
+}
+.left-column{
+    height: 85vh;
+    width: 150px;
+    background-color: darkgray;
+    float: left;
+    z-index: 3;
+}
+.right-column{
+    height: 85vh;
+    width: 150px;
+    background-color: darkgray;
+    float: right;
+    z-index: 3;
+}
+

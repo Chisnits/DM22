@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.main-header{
+    height: 100px;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+}
+.text{
+    color: black;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+h1{
+  animation-duration: 2s;
+  animation-name: rubberBand;
+  animation-iteration-count: infinite;
+}
+.main-body{
+    display: flex;
+    justify-content: center;
+    background: url(./gotham-city.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 86vh;
+}
+.lego-batman{
+    height: 500px;
+    width: 500px;
+    animation-duration: 3s;
+    animation-name: slideInLeft;
+    z-index: 3;
+}
+.lego-bane{
+    height: 500px;
+    width: 500px;
+    animation-duration: 3s;
+    animation-name: slideInRight;
+    z-index: 3;
+}
+.vs{
+    height: 250px;
+    position: absolute;
+    top: 240px;
+    z-index: 0;
+}
+
