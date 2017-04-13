@@ -1,11 +1,37 @@
-.top-section{
+/*.top-section{
     position: relative;
-}
+}*/
+/*.sticky-header{
+    position: relative;
+    top: 0;
+}*/
 .header-wallpaper{
     background-size: contain;
     width: 100%;
 }
-.header-logo{
+.mobile-header{
     position: fixed;
+    /*z-index: 999;*/
     width: 100%;
+    top: 0;
+}
+.mobile-logo{
+    background-size: contain;
+    width: 30%;
+}
+/*.header-logo{
+    position: fixed;
+    margin-left: 25px;
+    margin-top: 25px;
+}*/
+
+.hamgburger-container{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+    /*margin-top: 25px;*/
+}
+.mobile-hamburger{
+position: fixed;
+/*margin-top: 25px; */
 }

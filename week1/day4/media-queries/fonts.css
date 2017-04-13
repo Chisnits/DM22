@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700');
+
+
+html {
+    font-size: 16px;
+}
+
+@media (min-width: 750px) {
+    html {
+        font-size: 18px;
+    }
+
+}
+
+@media (min-width: 950px) {
+    html {
+        font-size: 20px;
+    }
+
+}
+
+h1 {
+    font-size:3.2rem;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+}
+
+a,p,button,li {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+}
