@@ -1,0 +1,42 @@
+.main-body{
+    width: 100%;
+}
+.wiki-header{
+    width: 100%;
+}
+.wiki-text{
+    width: 70%;
+    font-size: 150%;
+    margin: 0 auto;
+}
+.text-section-1{
+    margin-top: 35px;
+    margin-bottom:  20px;
+}
+span{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+.text-section-2{
+    margin-bottom: 20px;
+}
+.welcome-container{
+    font-weight: bold;
+    text-align: right;
+}
+.image-container{
+    margin-left: 220px;
+    margin-top: 50px;
+    width: 900px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wiki{
+    height: 225px;
+    width: 225px;
+    background-size: stretch;
+    /*float: left;*/
+}

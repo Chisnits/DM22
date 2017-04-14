@@ -5,7 +5,7 @@ body{
 .main-header{
     height: 100px;
     width: 100%;
-    background-color: greenyellow;
+    background-color: lavenderblush;
     display: flex;
     justify-content: center;
 }
@@ -29,19 +29,31 @@ h1{
     background-repeat: no-repeat;
     height: 86vh;
 }
+.hero-container{
+    height: 100%;
+    width: 55%;
+}
 .lego-batman{
     height: 500px;
     width: 500px;
+    /*animation-duration: 3s;
+    animation-name: slideInLeft;*/
+    z-index: 3;
+}
+.lego-batman-active{
     animation-duration: 3s;
     animation-name: slideInLeft;
-    z-index: 3;
 }
 .lego-bane{
     height: 500px;
     width: 500px;
+    /*animation-duration: 3s;
+    animation-name: slideInRight;*/
+    z-index: 3;
+}
+.lego-bane-active{
     animation-duration: 3s;
     animation-name: slideInRight;
-    z-index: 3;
 }
 .vs{
     height: 250px;
@@ -49,4 +61,15 @@ h1{
     top: 240px;
     z-index: 0;
 }
+.button-container{
+    display: flex;
+    align-items: center; 
+}
+.reset-button{
+    border-radius: 50%;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+}
+
 

@@ -1,37 +1,103 @@
-/*.top-section{
-    position: relative;
-}*/
-/*.sticky-header{
-    position: relative;
-    top: 0;
-}*/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oswald', serif;
+    font-weight: 600;
+}
+
+a,p,button,li {
+    font-family: 'Oswald', serif;
+    font-weight: 400;
+}
 .header-wallpaper{
     background-size: contain;
     width: 100%;
 }
 .mobile-header{
     position: fixed;
-    /*z-index: 999;*/
     width: 100%;
-    top: 0;
 }
 .mobile-logo{
-    background-size: contain;
     width: 30%;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 25px;
 }
-/*.header-logo{
+
+.hamgburger-container{
+   display: flex;
+   justify-content: flex-end;
+}
+.mobile-hamburger{
+    position: absolute;
+    margin-top: 25px;
+    padding-right: 65px;
+}
+.mobile-header-wallpaper{
+    background-image: url("../assets/guy-on-computer.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.header-text-line-1{
+    text-transform: uppercase;
+    font-size: 150%;
+}
+.header-text-line-2{
+    text-transform: uppercase;
+    font-size: 300%;
+}
+.header-text-line-3{
+    text-transform: capitalize;
+    font-size: 140%;
+}
+.header-text-line-4{
+    text-transform: capitalize;
+    font-size: 140%;
+}
+.white-box-1{
+    width: 20%;
+    height: 5px;
+    background-color: white;
+}
+.white-box-2{
+    width: 20%;
+    height: 5px;
+    background-color: white;
+
+}
+.mobile-learn-more-button{
+    margin-top: 25px;
+    background: #bdd436 ; 
+    border: 2px solid #bdd436 ;
+    color: #FFF ;
+    font-size: 16px ;
+    font-weight: 700 ;
+    letter-spacing: 1px;
+    padding: 11px 35% ;
+    border-radius: 25px ;
+}
+.second-level-text-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    color: #6a787c;
+}
+@media(min-width: 600px){
+    
+}
+/*.second-level-container{
+    display: flex;
+    align-items: center;
+}*/
+
+/*.desktop-header-logo{
     position: fixed;
     margin-left: 25px;
     margin-top: 25px;
 }*/
-
-.hamgburger-container{
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 25px;
-    /*margin-top: 25px;*/
-}
-.mobile-hamburger{
-position: fixed;
-/*margin-top: 25px; */
-}

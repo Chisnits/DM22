@@ -1,4 +1,4 @@
-/*.desktop-header {
+.desktop-header {
     background: #333;
     width:100%;
     height:70px;
@@ -13,7 +13,7 @@
     position: absolute;
     right:32px;
     top:13px;
-}*/
+}
 
 .desktop_nav {
     display: none;
