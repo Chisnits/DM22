@@ -181,7 +181,13 @@ body {
 				color: #2FC2EF;
 				cursor: pointer;
 				margin-right: 2px;
+				/*display: none;
+				visibility: hidden;*/
 			}
+	/*.tweet-actions:hover{
+		display: block;
+		visibility: visible;
+	}*/
 
 	.icon {
 		color: #2FC2EF;
@@ -261,9 +267,9 @@ body {
 				top: 0;
 				left: 0;
 			}
-
+			
 .change-height{
-	height: 400px;
+	height: 5em;
 }
 
 
