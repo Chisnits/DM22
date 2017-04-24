@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Angular Basics</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+  <script src="./index.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+    
+  <h3>One way binding</h3>
+  <h6 class="red">{{ greeting }}</h6>
+  
+  <h3>Two way binding</h3>
+  <input ng-model="inputText"/>
+  
+  <br/>
+  
+  The value of inputText is : {{ inputText }}
+  
+  <h3>Buttons</h3>
+  
+  <button ng-click="clicked()">Click me</button>
+  
+  <h3>Show / Hide / If</h3>
+  <div ng-show="isAwesome">You are awesome</div>
+  <div ng-hide="isAwesome">Sorry, you are not awesome</div>
+  
+  <div ng-show="messages.length">You have {{messages.length}} new messages</div>
+  
+  <div ng-if="isAdmin">You are an admin</div>
+  
+  <h3>Lists</h3>
+  
+  <li ng-repeat="language in codeLanguages">
+      {{language}}
+  </li>
+  
+  <h3>Filtering Lists</h3>
+  
+  <input placeholder="type filter here" ng-model="languageFilter"/>
+  
+  <li ng-show="languageFilter" ng-repeat="language in codeLanguages | filter: languageFilter ">
+      {{language}}
+  </li>
+  
+  <h3>Filtering Lists - Array of Objects</h3>
+  
+  <input placeholder="name filter" ng-model="heroFilter.name"/>
+    <input placeholder="power filter" ng-model="heroFilter.power"/>
+  
+  <li ng-repeat="hero in heroes | filter: heroFilter">
+    {{hero.name}} - ( <span ng-repeat="power in hero.powers"> {{ power }},</span> )
+  </li>
+  
+ 
+  
+  
+</body>
+</html>
