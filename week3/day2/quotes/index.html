@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quotes">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body ng-controller="mainCtrl">
+    
+    <input class="add-quote" type="text" placeholder="Add Quote" ng-model='newQuoteText'>
+    <input class="add-author" type="text" placeholder="Add Author" ng-model='newQuoteAuthor'>
+    <button ng-click="addQuote()">Add</button>
+    <input type="text" placeholder="Search" ng-model='filterText'>
+
+<section ng-repeat="quote in quotes | filter: filterText" class="quote-tab" >
+            <div class="text-container">
+            <p><span class="parentheses">"</span>{{quote.text}}<span class="parentheses">"</span> -- <span class="author">{{quote.author}}</span></p>
+            </div>
+            <div class="button-container">
+                <button class="delete-button" ng-click="deleteMe(quote.text)">X</button>
+            </div>
+</section>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="./app.js"></script>
+    <script src="./js/controller.js"></script>
+    <script src="./js/mainService.js"></script>
+</body>
+</html>
