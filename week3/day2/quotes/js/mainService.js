@@ -16,11 +16,18 @@ var quotes = [
 
   this.addData = function(newQuote){
     if(newQuote.text && newQuote.author){
-      quotes.push(newQuote);
+      quotes.unshift(newQuote);
       return true;
     }
     return false;
   };
+
+    JSON.stringify(quotes)
+    localStorage.setItem('storedQuotes','JSON.stringify(data)');
+    console.log(JSON.stringify('storedQuotes','JSON.stringify(quotes)'));
+
+    var storedItems = localStorage.getItem('storedQuotes')
+    console.log(storedItems)
 
   this.removeData = function(textToRemove){
     for (var i=0;i<quotes.length;i++){

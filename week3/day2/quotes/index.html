@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body ng-controller="mainCtrl">
-    
-    <input class="add-quote" type="text" placeholder="Add Quote" ng-model='newQuoteText'>
-    <input class="add-author" type="text" placeholder="Add Author" ng-model='newQuoteAuthor'>
-    <button ng-click="addQuote()">Add</button>
-    <input type="text" placeholder="Search" ng-model='filterText'>
+    <section class="search-container">   
+        <input class="search" type="text" placeholder="Search" ng-model='filterText'>
+    </section>
+    <section class="quote-tab add-card">
+        <span class="parentheses">"</span><input class="add-quote" type="text" placeholder="Add Quote" ng-model='newQuoteText'><span class="parentheses">"</span>
+        <input class="add-author" type="text" placeholder="Add Author" ng-model='newQuoteAuthor'>
 
+        <button class="add-button" ng-click="addQuote()">+</button>
+    </section>
 <section ng-repeat="quote in quotes | filter: filterText" class="quote-tab" >
             <div class="text-container">
-            <p><span class="parentheses">"</span>{{quote.text}}<span class="parentheses">"</span> -- <span class="author">{{quote.author}}</span></p>
+                <p><span class="parentheses">"</span>{{quote.text}}<span class="parentheses">"</span> -- <span class="author">{{quote.author}}</span></p>
             </div>
             <div class="button-container">
                 <button class="delete-button" ng-click="deleteMe(quote.text)">X</button>

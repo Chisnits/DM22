@@ -1,17 +1,47 @@
+input{
+    border: none;
+}
+.search-container{
+    display: flex;
+    justify-content: center;
+}
+.search{
+    height: 50px;
+    width: 300px;
+    /*background-color: lightblue;*/
+    border: solid 2px black;
+    text-align: center;
+    border-radius: 25px;
+}
+.add-card{
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    position: relative;
+}
+.add-button{
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 120px;
+}
 .quote-tab{
     /*width: 100%;*/
-    height: 100px;
+    height: 150px;
     border-radius: 15px;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 10px 10px 10px 5px grey;
     position: relative;
 }
 .text-container{
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    /*align-items: center;*/
+    /*justify-content: flex-start;*/
     font-size: 25px;
-    line-height: 10px;
+    /*line-height: 35px;*/
     /*white-space: nowrap;*/
 }
 .parentheses{
@@ -22,18 +52,32 @@
     color: gray;
 }
 .button-container{
-    position: relative;
+    /*position: relative;*/
     display: flex;
     justify-content: flex-end;
-
+    position: absolute;
+    right: 10px;
+    top: 120px;
 }
 .delete-button{
     border-radius: 50%;
     background-color: black;
     color: white;
-    /*margin-right: 15px;*/
     /*position: absolute;
     right: 10px;
-    top: 10px;*/
+    top: 25px;*/
+}
+.add-quote{
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+    color: black;
+}
+.add-author{
+    height: 50px;
+    width: 300px;
+    margin-right: 300px;
+    font-size: 25px;
+    background-color: transparent;
 }
 
