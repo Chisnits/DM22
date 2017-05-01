@@ -1,0 +1,17 @@
+.body-wrapper{
+    display: flex;
+}
+.star-wars-wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+    /*height: 100vh;*/
+}
+.characters{
+    width: 100px; 
+}
+.pokemon-wrapper{
+    display: flex;
+    flex-direction: column;
+}

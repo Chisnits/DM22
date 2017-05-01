@@ -1,6 +1,41 @@
 <html ng-app="apiApp">
-	<body>
-		
+	<link rel="stylesheet" href="./styles.css">
+	<body ng-controller="mainCtrl">
+		<!--{{test}}-->
+		<button ng-click="starWarsVisible=!starWarsVisible">Star Wars</button>
+		<button ng-click="pokemonVisible=!pokemonVisible">Pokemon</button>
+	<section class="body-wrapper">
+		<section class="star-wars-wrapper">
+			<h1>Star Wars</h1>
+				<h4>People</h4>
+				<div ng-show="starWarsVisible"class="characters" ng-repeat="character in characters">
+					<ul>
+						<li>{{character.name}}</li>
+						<li>{{character.height}}</li>
+						<li>{{character.gender}}</li>
+						<li>{{character.homeworld}}</li>
+					</ul>
+				</div>
+				<h4>Planets</h4>
+				<div ng-show="starWarsVisible"class="planets" ng-repeat="planet in planets">
+					<ul>
+						<li>{{planet.name}}</li>
+						<li>{{planet.climate}}</li>
+						<li>{{planet.population}}</li>
+						<li>{{planet.terrain}}</li>
+					</ul>
+				</div>
+		</section>
+		<section class="pokemon-wrapper">
+			<h1>Pokemon</h1>
+			<div ng-show="pokemonVisible" class="pokemon" ng-repeat="pokemon in pokemon">
+				<ul>
+					<li>{{pokemon.name}}</li>
+				</ul>
+			</div>
+		</section>
+	</section>
+
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
