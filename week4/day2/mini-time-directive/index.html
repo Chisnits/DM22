@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="time">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-controller="mainCtrl">
+    
+    <h3>Hello, {{name}}</h3>
+    <time-directive></time-directive>
+
+    <input-field when-clicked="alerter(someText)"button-text="Alert this"></input-field>
+    <input-field when-clicked="logger(someText)" button-text="Log this"></input-field>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/mainCtrl.js"></script>
+    <script src="./js/timeDirective.js"></script>
+    <script src="./js/inputField.js"></script>
+</body>
+</html>
