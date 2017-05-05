@@ -1,13 +1,13 @@
 angular.module('weatherApp').service('weatherService', function($http){
     
-    var baseUrl = "http://api.openweathermap.org/data/2.5/weather?lat={"+lat+"}&lon={"+lon+"}";
+    var baseUrl = "http://api.openweathermap.org/data/2.5/"
     var apiKey = "8a22a16e9c88b36888875591e135bd0d"
-    this.getWeather = function(){
+    this.getWeather = function(lat,lon){
+        console.log(lat, lon);
         return $http({
             method: 'GET',
-            url: baseUrl + apiKey
+            url: baseUrl + "weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
     }).then(function(response){
-        // console.log(response.data)
         if(response.status === 200){
             return response.data
         }
