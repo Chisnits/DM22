@@ -1,0 +1,46 @@
+h1,h2,h3,h4,h5,h6{
+    color: white;
+    font-size: 50px;
+}
+.weather-wrapper{
+    display: flex;
+    justify-content: center;
+        .wallpaper{
+            height: 99vh;
+            width: 100%;
+            background-size: cover;
+            
+        }
+        .weather-display-container{
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            margin-top: 600px;
+            background-size: cover;
+            z-index: 10;
+            display: none;
+                .sunny-icon{
+                    height: 150px;
+                }
+                .rainy-icon{
+                    height: 150px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+        }
+        .weather-container{
+            height: 500px;
+            width: 700px;
+            background-color: black;
+            opacity: 0.5;
+            position: absolute;
+            margin-top: 250px;
+            z-index: 1;
+                .text-container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+        }
+}
