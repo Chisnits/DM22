@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../dist/bundle.css">
+    <link rel="stylesheet" href="./bundle.css">
 </head>
-<body ng-controller="weatherCtrl">
+<body>
 
+<menu class="menu-container">
+    <menu-directive class="menu"></menu-directive>
+</menu>
+<ui-view></ui-view>
 
-<ui-view> </ui-view>
-
-    <!--<menu-directive></menu-directive>-->
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.js"></script>
-<script src="./js/app.js"></script>
-<script src="./js/controllers/weatherCtrl.js"></script>
+<script src="./bundle.js"></script>
+<!--<script src="./js/controllers/weatherCtrl.js"></script>
 <script src="./js/services/weatherService.js"></script>
-<script src="./js/directives/menuDirective.js"></script>
+<script src="./js/directives/menuDirective.js"></script>-->
 </body>
 </html>

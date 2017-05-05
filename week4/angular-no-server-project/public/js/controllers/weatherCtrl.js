@@ -1,7 +1,8 @@
-angular.module('weatherApp').controller('weatherCtrl', function($scope, weatherService){
+angular.module('weatherApp').controller('weatherCtrl', function($scope, weatherService, pic){
     $scope.lat;
     $scope.lon;
     $scope.showView = false;
+    $scope.pictures = pic.url;
 
 weatherService.getCurrentLocation().then(function(location){
     $scope.location = location;
@@ -17,13 +18,6 @@ weatherService.getCurrentLocation().then(function(location){
 });
 
 
-
-
-weatherService.getBackground().then(function(pictures){
-        $scope.showView = true;
-        $scope.pictures = pictures.url;
-        // console.log(pictures);
-    })
 
 
 

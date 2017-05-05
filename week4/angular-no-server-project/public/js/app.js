@@ -5,12 +5,18 @@ var app = angular.module('weatherApp',['ui.router']).config(function ($stateProv
         .state('home', {
             url: '/',
             templateUrl: './views/home.html',
+            controller: 'weatherCtrl',
+            resolve: {
+                pic: function(weatherService){
+                    return weatherService.getBackground();
+                }
+            }
         })
         .state('fiveDayForecast', {
-            url: '/',
+            url: '/five',
             templateUrl: './views/fiveDayForecast.html',
         });
-        
+
         $urlRouterProvider.when('','/');
         
         });
