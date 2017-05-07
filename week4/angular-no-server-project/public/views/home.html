@@ -6,10 +6,13 @@
         </div>
         <section class="weather-container">
             <div class="text-container">
-                  <h1>{{location.country}}</h1>
-                  <h2>{{weather.name}}</h2>
-                  <h2>{{currentWeather}}</h2>
-                  <h2></h2>
+                  <h3>{{location.country}}</h3>
+                  <h3>{{weather.name}}</h3>
+                  <h3>{{currentWeather}}</h3>
+                  <h3>Humidity: {{weather.main.humidity}}%</h3>
+                  <h3>Current Temp: {{weather.main.temp}}</h3>
+                  <h3>Max Temp: {{weather.main.temp_min}}</h3>
+                  <h3>Min Temp: {{weather.main.temp_max}}</h3>
                 <div>
                 </div>
             </div>

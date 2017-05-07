@@ -6,7 +6,7 @@ angular.module('weatherApp').service('weatherService', function($http){
         console.log(lat, lon);
         return $http({
             method: 'GET',
-            url: baseUrl + "weather?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
+            url: baseUrl + "weather?" + "mode=json&units=imperial&" + "lat=" + lat + "&lon=" + lon + "&appid=" + apiKey
     }).then(function(response){
         if(response.status === 200){
             return response.data
