@@ -3,6 +3,8 @@ angular.module('weatherApp').controller('weatherCtrl', function($scope, weatherS
     $scope.lat = location.lat;
     $scope.lon = location.lon;
 
+    $scope.currentTime = moment().format('LT');
+
 weatherService.getCurrentLocation().then(function(location){
     $scope.location = location;
     console.log(location)
@@ -21,9 +23,23 @@ weatherService.getCurrentLocation().then(function(location){
         var weatherIcon = weatherObj.icon;
         $scope.weatherIcon = iconBaseUrl + weatherIcon + ".png"
         console.log($scope.weatherIcon)
-
         
+        var currentTemp = weather.main.temp;
+        $scope.currentTemp = Math.round(currentTemp);
+
+        var maxTemp = weather.main.temp_max;
+        $scope.maxTemp = Math.round(maxTemp);
+
+        var minTemp = weather.main.temp_min;
+        $scope.minTemp = Math.round(minTemp);
     })
+
+    var date = new Date()
+    var format = 'LLLL'
+    var results = moment(date).format(format);
+    console.log(results)
+    $scope.results = results;
+
 
 });
 });
