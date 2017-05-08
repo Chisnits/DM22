@@ -1,13 +1,16 @@
 angular.module('weatherApp').controller('weatherCtrl', function($scope, weatherService, pic){
     $scope.pictures = pic.url;
+    $scope.lat = location.lat;
+    $scope.lon = location.lon;
 
 weatherService.getCurrentLocation().then(function(location){
     $scope.location = location;
     console.log(location)
     $scope.lat = location.lat;
     $scope.lon = location.lon;
-    
-    console.log($scope.lat,$scope.lon)
+
+
+
     weatherService.getWeather($scope.lat, $scope.lon).then(function(weather){
         $scope.weather = weather;
         console.log(weather)
@@ -20,16 +23,7 @@ weatherService.getCurrentLocation().then(function(location){
         console.log($scope.weatherIcon)
 
         
-    }) 
-    //    $scope.getIconImageUrl = function(iconName) {
-    //   return (iconName ? $scope.iconBaseUrl + iconName + '.png' : '');
-    // };
+    })
+
 });
-
-
-
-
-
-
-
 });
