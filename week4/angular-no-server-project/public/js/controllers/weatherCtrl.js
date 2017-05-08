@@ -1,7 +1,4 @@
 angular.module('weatherApp').controller('weatherCtrl', function($scope, weatherService, pic){
-    $scope.lat;
-    $scope.lon;
-    $scope.showView = false;
     $scope.pictures = pic.url;
 
 weatherService.getCurrentLocation().then(function(location){
@@ -15,11 +12,18 @@ weatherService.getCurrentLocation().then(function(location){
         $scope.weather = weather;
         console.log(weather)
         var weatherObj = weather.weather.pop()
-        var currentWeather = weatherObj.description;
+        var currentWeather = weatherObj.main;
         $scope.currentWeather = currentWeather;
+        var iconBaseUrl = 'http://openweathermap.org/img/w/'
+        var weatherIcon = weatherObj.icon;
+        $scope.weatherIcon = iconBaseUrl + weatherIcon + ".png"
+        console.log($scope.weatherIcon)
 
         
     }) 
+    //    $scope.getIconImageUrl = function(iconName) {
+    //   return (iconName ? $scope.iconBaseUrl + iconName + '.png' : '');
+    // };
 });
 
 

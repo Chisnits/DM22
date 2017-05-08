@@ -21,22 +21,13 @@ h1,h2,h3,h4,h5,h6{
             
         }
         .weather-display-container{
-            height: 150px;
+            // height: 150px;
             width: 150px;
             position: absolute;
-            margin-top: 600px;
+            margin-top: 405px;
             background-size: cover;
             z-index: 10;
-            display: none;
-                .sunny-icon{
-                    height: 150px;
-                }
-                .rainy-icon{
-                    height: 150px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
+            
         }
         .weather-container{
             height: 500px;
@@ -50,6 +41,7 @@ h1,h2,h3,h4,h5,h6{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    margin-top: 40px;
                 }
         }
 }
